@@ -14,7 +14,7 @@ So after enough people had managed to bug me, especially after Anupta's (Jana) F
   * Study and compare the difference in output between the various models.
   * Learning more about the stochastic nature of AI output and also how we should not blindly depend on AI
 
-**Note about "free" models** : Always remember "when the service is free, ***you*** are the product\!". At this juncture we in India should be mindful of the [The Digital Personal Data Protection Act (DPDP), 2023] ([suspicious link removed]) which is likely to kick in as a law on the land any day now.
+**Note about "free" models** : Always remember "when the service is free, ***you*** are the product\!". At this juncture we in India should be mindful of the [The Digital Personal Data Protection Act (DPDP), 2023](https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf) which is likely to kick in as a law on the land any day now.
 
 Well, you people wanted this badly. So far, I do not agree with that view-point, but here it is\! Signing out with the words of Sukumar Ray (The GOAT) - "তারপরে যাও যেথায় খুশি, জ্বালিও নাকো মোরে" :wink:
 
