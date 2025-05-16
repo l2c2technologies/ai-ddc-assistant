@@ -6,11 +6,9 @@ However, several readers of our blog, our clients and partners and friends in th
 
 So after enough people had managed to bug me, especially after Anupta's (Jana) FB post on the topic, I decided to put in a few hours effort and here it is - warts and all. What this "toy" allows you to do is :
 
-(a) Experiment with over more than ****270**** LLM models (including variants) from over ****45**** AI providers and with more than ****70**** free models (daily usage quota may apply) with just a single click of the mouse.
-
-(b) Study and compare the difference in output between the various models.
-
-(c) Learning more about the stochastic nature of AI output and also how we should not blindly depend on AI
+* (a) Experiment with over more than ****270**** LLM models (including variants) from over ****45**** AI providers and with more than ****70**** free models (daily usage quota may apply) with just a single click of the mouse.
+* (b) Study and compare the difference in output between the various models.
+* (c) Learning more about the stochastic nature of AI output and also how we should not blindly depend on AI
 
 Note about "free" models : Always remember "when the service is free, ***you*** are the product!". At this juncture we in India should be mindful of the The Digital Personal Data Protection Act (DPDP), 2023 (NO. 22 OF 2023)
 [(https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf)](https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf)
@@ -68,32 +66,32 @@ This information helps in understanding the usage patterns and costs associated 
 
 ## Features
 
-* **AI-Powered Suggestions:** Uses various Large Language Models (LLMs) via OpenRouter to generate DDC23 suggestions.
+* AI-Powered Suggestions:** Uses various Large Language Models (LLMs) via OpenRouter to generate DDC23 suggestions.
 * **Model Selection:** Allows users to choose from a list of available LLMs, each with potentially different performance and cost.
 
     ![LLM Model Selection](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image2.png)
 
-* **Contextual Prompting:** Constructs a detailed prompt for the AI using the bibliographic information available in the MARC fields (245$, 020$a, 520$a, 650$a).
-* **Clear Presentation:** Displays the AI-generated DDC suggestions in a modal dialog, highlighting the most suitable suggestion (if identified by the AI).
+* Contextual Prompting:** Constructs a detailed prompt for the AI using the bibliographic information available in the MARC fields (245$, 020$a, 520$a, 650$a).
+* Clear Presentation:** Displays the AI-generated DDC suggestions in a modal dialog, highlighting the most suitable suggestion (if identified by the AI).
 
     ![DDC Suggestions Modal](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image1.png)
 
-* **Integration with Koha:** Allows users to easily select a suggested DDC number, which will then populate the 082$a field in the bibliographic record within the Koha interface.
-* **AI Analysis View:** Provides an option to view the raw response from the AI model for better understanding of its reasoning.
+* Integration with Koha:** Allows users to easily select a suggested DDC number, which will then populate the 082$a field in the bibliographic record within the Koha interface.
+* AI Analysis View:** Provides an option to view the raw response from the AI model for better understanding of its reasoning.
 
     ![AI Analysis](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image4.png)
 
-* **OpenRouter Credit Information:** Displays the user's OpenRouter API credit balance and usage. *(See Image 1 above)*
-* **Usage Tracking:** Records information about the AI model used and the token consumption in the 538$a field of the bibliographic record. *(See Image 5 above)*
+* OpenRouter Credit Information:** Displays the user's OpenRouter API credit balance and usage. *(See Image 1 above)*
+* Usage Tracking:** Records information about the AI model used and the token consumption in the 538$a field of the bibliographic record. *(See Image 5 above)*
 
 ## Prerequisites
 
 To use this script within Koha, you need:
 
-* **Koha ILS Installation:** A working installation of the Koha Integrated Library System.
-* **Internet Connectivity:** The Koha server (or the user's browser) needs internet access to communicate with the OpenRouter API.
-* **OpenRouter API Key:** You will need an API key from [OpenRouter](https://openrouter.ai/) to access the AI models.
-* **OpenRouter Account with Minimum Credit:** Ensure your OpenRouter account has a minimum of USD 5 credit.
+* Koha ILS Installation:** A working installation of the Koha Integrated Library System.
+* Internet Connectivity:** The Koha server (or the user's browser) needs internet access to communicate with the OpenRouter API.
+* OpenRouter API Key:** You will need an API key from [OpenRouter](https://openrouter.ai/) to access the AI models.
+* OpenRouter Account with Minimum Credit:** Ensure your OpenRouter account has a minimum of USD 5 credit.
 
 Koha should already include jQuery. You might need to ensure Bootstrap and Select2 are available or include their CDN links if they are not standard in your Koha setup. Font Awesome is also used for icons.
 
