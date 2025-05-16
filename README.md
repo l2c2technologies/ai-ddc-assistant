@@ -26,6 +26,8 @@ Well, you people wanted this badly. So far, I do not agree with that view-point,
 
 This is a jQuery-based helper snippet for the [Koha Integrated Library System (ILS)](https://koha-community.org/) that leverages generative AI models via the [OpenRouter.ai](https://openrouter.ai/) service to suggest Dewey Decimal Classification (DDC) numbers (based on the 23rd edition). The suggestions are generated based on the bibliographic record's [title](https://www.oclc.org/bibformats/en/2xx/245.html), author (implicitly through 245$c), [ISBN](https://www.oclc.org/bibformats/en/0xx/020.html), [subject headings](https://www.oclc.org/bibformats/en/6xx/650.html), and [summary](https://www.oclc.org/bibformats/en/5xx/520.html).
 
+## TL;DR
+
 **GitHub Repository:** [https://github.com/l2c2technologies/koha-ai-ddc-assistant](https://github.com/l2c2technologies/koha-ai-ddc-assistant)
 
 This script seamlessly integrates into Koha through the system preferences `IntranetUserJS` and `IntranetUserCSS` by using the code available [here](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/koha-ai-ddc-assistant.js) and [here](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/koha-ai-ddc-assistant.css).
@@ -44,7 +46,8 @@ This script seamlessly integrates into Koha through the system preferences `Intr
       * **Negative Balance:** If your account has a negative credit balance, you may encounter `402` errors, even for free models. Adding credits to bring your balance above zero will restore access.
   * **Error Handling:** If there's an issue communicating with the OpenRouter API (e.g., invalid API key, insufficient credits, rate limiting, or service outage), an error message will be displayed.
 
-    ![OpenRouter API Error](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image3.png)
+    ![Image #1 : OpenRouter API Error](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image1.png)
+    *OpenRouter API error message.*
 
 ## Telemetry
 
@@ -59,24 +62,28 @@ This assistant captures operational data about the AI suggestion process and sto
 
 This information helps in understanding the usage patterns and costs associated with the AI assistant at individual bibliographic record level.
 
-![MARC 538 Telemetry Data](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image5.png)
+![Image #2 : MARC 538 Telemetry Data](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image2.png)
+*Telemetry data recorded in the MARC 538 field.*
 
 ## Features
 
   * **AI-Powered Suggestions:** Uses various Large Language Models (LLMs) via OpenRouter to generate DDC23 suggestions.
   * **Model Selection:** Allows users to choose from a list of available LLMs, each with potentially different performance and cost.
 
-    ![LLM Model Selection](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image2.png)
+    ![Image #3 : LLM Model Selection](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image3.png)
+    *Dropdown menu for selecting the LLM model.*
 
   * **Contextual Prompting:** Constructs a detailed prompt for the AI using the bibliographic information available in the MARC fields (245$, 020$a, 520$a, 650$a).
   * **Clear Presentation:** Displays the AI-generated DDC suggestions in a modal dialog, highlighting the most suitable suggestion (if identified by the AI).
 
-    ![DDC Suggestions Modal](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image1.png)
+    ![Image #4 : DDC Suggestions Modal](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image4.png)
+    *Modal dialog displaying the AI-generated DDC suggestions and OpenRouter credit information.*
 
   * **Integration with Koha:** Allows users to easily select a suggested DDC number, which will then populate the 082$a field in the bibliographic record within the Koha interface.
   * **AI Analysis View:** Provides an option to view the raw response from the AI model for better understanding of its reasoning.
 
-    ![AI Analysis](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image4.png)
+    ![Image #5 : AI Analysis](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image5.png)
+    *View of the raw response from the AI model.*
 
   * **OpenRouter Credit Information:** Displays the user's OpenRouter API credit balance and usage. *(See Image 1 above)*
   * **Usage Tracking:** Records information about the AI model used and the token consumption in the 538$a field of the bibliographic record. *(See Image 5 above)*
