@@ -105,6 +105,8 @@ This script is designed to be included in Koha's system preferences:
 6.  Select a suggestion and click "Select" to populate the 082$a field. The 538 field will also be updated with telemetry data. *(See Image 5)*
 7.  To understand the AI's reasoning, click the "here" link in the modal to view the AI Analysis. *(See Image 4)*
 
+**Note:** This code will function correctly regardless of whether the MARC21 fields required for generating prompts and for updating with the selected DDC number are located within the same tab or across separate tabs in your Koha cataloging interface. The only prerequisite is that the specific MARC21 field and subfield must exist within your Koha's MARC21 framework.
+
 ## Configuration
 
 * **`modelData` Array:** You can modify the `modelData` array in the **IntranetUserJS** to customize the list of available LLMs.
