@@ -2,7 +2,7 @@
 
 ## Foreword
 
-This tiny "side project" is meant to be more of a "academic toy" rather than a serious product. Personally speaking, I'm not in favor of *solely* using GenAI for finding out DDC class numbers, given the frequent bouts of "hallucinations" being so common with current AI models. Also, getting accurate results can be difficult for digital bibliographic records that are short on metadata. As my good friend and senior - [Prof. Parthasarathi Mukhopadhyay](https://www.linkedin.com/in/parthasarathi-mukhopadhyay-68a73417/) mentioned recently on FB - we need to look beyond off-the-shelf LLM models; to satisfy the needs of the user community along with the need for accuracy and being mindful of the biases, exploring RAG (Retrieval-Augmented Generation) by taking help of validated corpora is one of the possible way forward. I concur.
+This tiny "side project" is meant to be more of a "academic toy" rather than a serious product. Personally speaking, I'm not in favor of *solely* using GenAI for finding out DDC class numbers, given the frequent bouts of "hallucinations" being so common with current AI models. Also, getting accurate results can be difficult for digital bibliographic records that are short on metadata. As [Prof. Parthasarathi Mukhopadhyay](https://www.linkedin.com/in/parthasarathi-mukhopadhyay-68a73417/) mentioned recently on FB - we need to look beyond off-the-shelf LLM models; to satisfy the needs of the user community along with the need for accuracy and being mindful of the biases, exploring RAG (Retrieval-Augmented Generation) by taking help of validated corpora is one of the possible way forward. I concur.
 
 However, several readers of our blog, our clients and partners and friends in the Indian LIS community have been long asking me for something of this nature, especially since OCLC closed down the free OCLC Classify service in 2022. To be fair to OCLC, the project started as an experimental FRBR based classification service in 2008. It was never meant to be a long-term project. In fact OCLC gave a full 2 years of heads-up in announcing the project's planned shutdown in 2022.
 
@@ -24,7 +24,7 @@ Well, you people wanted this badly. So far, I do not agree with that view-point,
 
 ## Overview
 
-This is a jQuery-based helper snippet for the [Koha Integrated Library System (ILS)](https://koha-community.org/) that leverages generative AI models via the [OpenRouter.ai](https://openrouter.ai/) service to suggest Dewey Decimal Classification (DDC) numbers (based on the 23rd edition). The suggestions are generated based on the bibliographic record's title, author (implicitly through 245$c), ISBN, subject headings, and summary.
+This is a jQuery-based helper snippet for the [Koha Integrated Library System (ILS)](https://koha-community.org/) that leverages generative AI models via the [OpenRouter.ai](https://openrouter.ai/) service to suggest Dewey Decimal Classification (DDC) numbers (based on the 23rd edition). The suggestions are generated based on the bibliographic record's [title](https://www.oclc.org/bibformats/en/2xx/245.html), author (implicitly through 245$c), [ISBN](https://www.oclc.org/bibformats/en/0xx/020.html), [subject headings](https://www.oclc.org/bibformats/en/6xx/650.html), and [summary](https://www.oclc.org/bibformats/en/5xx/520.html).
 
 **GitHub Repository:** [https://github.com/l2c2technologies/koha-ai-ddc-assistant](https://github.com/l2c2technologies/koha-ai-ddc-assistant)
 
