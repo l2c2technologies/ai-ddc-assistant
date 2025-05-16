@@ -28,7 +28,9 @@ The CSS inclusion snippet is available at: [https://github.com/l2c2technologies/
     * **DDoS Protection:** Cloudflare's DDoS protection will block unusually high traffic.
     * **Paid Usage Limits:** For other requests, rate limits depend on your remaining credits: 1 request per credit per second, up to a surge limit (typically 500 requests per second).
     * **Negative Balance:** If your account has a negative credit balance, you may encounter `402` errors, even for free models. Adding credits to bring your balance above zero will restore access.
-* **Error Handling:** If there's an issue communicating with the OpenRouter API (e.g., invalid API key, insufficient credits, rate limiting, or service outage), an error message will be displayed. *(See Image 3)*
+* **Error Handling:** If there's an issue communicating with the OpenRouter API (e.g., invalid API key, insufficient credits, rate limiting, or service outage), an error message will be displayed.
+
+    ![OpenRouter API Error](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image3.png)
 
 ## Telemetry
 
@@ -41,18 +43,29 @@ This assistant captures operational data about the AI suggestion process and sto
 * The logged-in Koha username.
 * The borrowernumber of the logged-in user (if available).
 
-This information helps in understanding the usage patterns and costs associated with the AI assistant at individual bibliographic record level. *(See Image 5)*
+This information helps in understanding the usage patterns and costs associated with the AI assistant at individual bibliographic record level.
+
+![MARC 538 Telemetry Data](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image5.png)
 
 ## Features
 
 * **AI-Powered Suggestions:** Uses various Large Language Models (LLMs) via OpenRouter to generate DDC23 suggestions.
-* **Model Selection:** Allows users to choose from a list of available LLMs, each with potentially different performance and cost. *(See Image 2)*
+* **Model Selection:** Allows users to choose from a list of available LLMs, each with potentially different performance and cost.
+
+    ![LLM Model Selection](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image2.png)
+
 * **Contextual Prompting:** Constructs a detailed prompt for the AI using the bibliographic information available in the MARC fields (245$, 020$a, 520$a, 650$a).
-* **Clear Presentation:** Displays the AI-generated DDC suggestions in a modal dialog, highlighting the most suitable suggestion (if identified by the AI). *(See Image 1)*
+* **Clear Presentation:** Displays the AI-generated DDC suggestions in a modal dialog, highlighting the most suitable suggestion (if identified by the AI).
+
+    ![DDC Suggestions Modal](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image1.png)
+
 * **Integration with Koha:** Allows users to easily select a suggested DDC number, which will then populate the 082$a field in the bibliographic record within the Koha interface.
-* **AI Analysis View:** Provides an option to view the raw response from the AI model for better understanding of its reasoning. *(See Image 4)*
-* **OpenRouter Credit Information:** Displays the user's OpenRouter API credit balance and usage. *(See Image 1)*
-* **Usage Tracking:** Records information about the AI model used and the token consumption in the 538$a field of the bibliographic record.
+* **AI Analysis View:** Provides an option to view the raw response from the AI model for better understanding of its reasoning.
+
+    ![AI Analysis](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image4.png)
+
+* **OpenRouter Credit Information:** Displays the user's OpenRouter API credit balance and usage. *(See Image 1 above)*
+* **Usage Tracking:** Records information about the AI model used and the token consumption in the 538$a field of the bibliographic record. *(See Image 5 above)*
 
 ## Prerequisites
 
