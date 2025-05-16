@@ -32,6 +32,21 @@ This is a jQuery-based helper snippet for the [Koha Integrated Library System (I
 
 This script seamlessly integrates into Koha through the system preferences `IntranetUserJS` and `IntranetUserCSS` by using the code available [here](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/koha-ai-ddc-assistant.js) and [here](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/koha-ai-ddc-assistant.css).
 
+## Table of Contents
+
+* [About OpenRouter](#about-openrouter)
+* [Important Notes Regarding OpenRouter](#important-notes-regarding-openrouter)
+* [Telemetry](#telemetry)
+* [Features](#features)
+* [Prerequisites](#prerequisites)
+* [Installation in Koha](#installation-in-koha)
+* [Usage in Koha](#usage-in-koha)
+* [Configuration](#configuration)
+* [License](#license)
+* [Author](#author)
+* [Version](#version)
+* [Date](#date)
+
 ## About OpenRouter
 
 [OpenRouter](https://openrouter.ai/) is an aggregator that provides a single API to access various Large Language Models (LLMs) from different providers like OpenAI, Anthropic, Google, and others. This allows developers to easily experiment with and utilize different AI models through a unified interface.
@@ -46,8 +61,12 @@ This script seamlessly integrates into Koha through the system preferences `Intr
       * **Negative Balance:** If your account has a negative credit balance, you may encounter `402` errors, even for free models. Adding credits to bring your balance above zero will restore access.
   * **Error Handling:** If there's an issue communicating with the OpenRouter API (e.g., invalid API key, insufficient credits, rate limiting, or service outage), an error message will be displayed.
 
-    ![Image \#1 : OpenRouter API Error](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image1.png)
-    *OpenRouter API error message.*
+<p align="center">
+    <img src="https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image3.png" alt="OpenRouter API Error">
+</p>
+<p align="center">
+    <em>OpenRouter API error message.</em>
+</p>
 
 ## Telemetry
 
@@ -62,28 +81,44 @@ This assistant captures operational data about the AI suggestion process and sto
 
 This information helps in understanding the usage patterns and costs associated with the AI assistant at individual bibliographic record level.
 
-![Image #2 : MARC 538 Telemetry Data](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image2.png)
-*Telemetry data recorded in the MARC 538 field.*
+<p align="center">
+    <img src="https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image5.png" alt="MARC 538 Telemetry Data">
+</p>
+<p align="center">
+    <em>Telemetry data recorded in the MARC 538 field.</em>
+</p>
 
 ## Features
 
   * **AI-Powered Suggestions:** Uses various Large Language Models (LLMs) via OpenRouter to generate DDC23 suggestions.
   * **Model Selection:** Allows users to choose from a list of available LLMs, each with potentially different performance and cost.
 
-    ![Image #3 : LLM Model Selection](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image3.png)
-    *Dropdown menu for selecting the LLM model.*
+<p align="center">
+    <img src="https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image2.png" alt="LLM Model Selection">
+</p>
+<p align="center">
+    <em>Dropdown menu for selecting the LLM model.</em>
+</p>
 
   * **Contextual Prompting:** Constructs a detailed prompt for the AI using the bibliographic information available in the MARC fields (245$, 020$a, 520$a, 650$a).
   * **Clear Presentation:** Displays the AI-generated DDC suggestions in a modal dialog, highlighting the most suitable suggestion (if identified by the AI).
 
-    ![Image #4 : DDC Suggestions Modal](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image4.png)
-    *Modal dialog displaying the AI-generated DDC suggestions and OpenRouter credit information.*
+<p align="center">
+    <img src="https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image1.png" alt="DDC Suggestions Modal">
+</p>
+<p align="center">
+    <em>Modal dialog displaying the AI-generated DDC suggestions and OpenRouter credit information.</em>
+</p>
 
   * **Integration with Koha:** Allows users to easily select a suggested DDC number, which will then populate the 082$a field in the bibliographic record within the Koha interface.
   * **AI Analysis View:** Provides an option to view the raw response from the AI model for better understanding of its reasoning.
 
-    ![Image #5 : AI Analysis](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image5.png)
-    *View of the raw response from the AI model.*
+<p align="center">
+    <img src="https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image4.png" alt="AI Analysis">
+</p>
+<p align="center">
+    <em>View of the raw response from the AI model.</em>
+</p>
 
   * **OpenRouter Credit Information:** Displays the user's OpenRouter API credit balance and usage. *(See Image 1 above)*
   * **Usage Tracking:** Records information about the AI model used and the token consumption in the 538$a field of the bibliographic record. *(See Image 5 above)*
@@ -116,12 +151,12 @@ This script is designed to be included in Koha's system preferences:
 ## Usage in Koha
 
 1.  Navigate to the cataloging interface in your Koha intranet.
-2.  You will see a "Get Dewey Suggestions" checkbox and a model selection dropdown near the title field. *(See Image 2)*
+2.  You will see a "Get Dewey Suggestions" checkbox and a model selection dropdown near the title field. *(See Image 3 above)*
 3.  Optionally, select an LLM model from the dropdown menu.
 4.  Check the "Get Dewey Suggestions" checkbox.
-5.  A modal dialog will appear with AI-generated DDC number suggestions, along with credit information and usage details. *(See Image 1)*
-6.  Select a suggestion and click "Select" to populate the 082$a field. The 538 field will also be updated with telemetry data. *(See Image 5)*
-7.  To understand the AI's reasoning, click the "here" link in the modal to view the AI Analysis. *(See Image 4)*
+5.  A modal dialog will appear with AI-generated DDC number suggestions, along with credit information and usage details. *(See Image 4 above)*
+6.  Select a suggestion and click "Select" to populate the 082$a field. The 538 field will also be updated with telemetry data. *(See Image 2 above)*
+7.  To understand the AI's reasoning, click the "here" link in the modal to view the AI Analysis. *(See Image 5 above)*
 
 **Note:** This code will function correctly regardless of whether the MARC21 fields required for generating prompts and for updating with the selected DDC number are located within the same tab or across separate tabs in your Koha cataloging interface. The only prerequisite is that the specific MARC21 field and subfield must exist within your Koha's MARC21 framework.
 
