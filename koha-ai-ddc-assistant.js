@@ -305,7 +305,7 @@ $(document).ready(function() {
         var openrouterApiKey = 'ADD_YOUR_OWN_OPENROUTER_API_KEY';
 
         var triggerCheckboxHTML = '<div class="ddc-controls">' +
-            '<span class="field_controls ddc-trigger-container" id="deepseek-trigger">' +
+            '<span class="field_controls ddc-trigger-container" id="ai-ddc-trigger">' +
             '<label><input type="checkbox" id="get-ddc-suggestions"> Get Dewey Suggestions</label>' +
             '<span id="ddc-spinner" style="display: none; margin-left: 5px;"><i class="fa fa-spinner fa-spin"></i></span>' +
             '</span>';
