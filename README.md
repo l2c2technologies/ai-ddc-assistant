@@ -1,6 +1,6 @@
 # AI-Powered DDC23 Suggestions Assistant for Koha
 
-## Introduction
+## Foreword
 
 This tiny "side project" is meant to be more of a "academic toy" rather than a serious product. Personally speaking, I'm not in favor of *solely* using GenAI for finding out DDC class numbers, given the frequent bouts of "hallucinations" being so common with current AI models. Also, getting accurate results can be difficult for digital bibliographic records that are short on metadata. As my good friend and senior - [Prof. Parthasarathi Mukhopadhyay](https://www.linkedin.com/in/parthasarathi-mukhopadhyay-68a73417/) mentioned recently on FB - we need to look beyond off-the-shelf LLM models; to satisfy the needs of the user community along with the need for accuracy and being mindful of the biases, exploring RAG (Retrieval-Augmented Generation) by taking help of validated corpora is one of the possible way forward. I concur.
 
