@@ -1,5 +1,24 @@
 # AI-Powered DDC23 Suggestions Assistant for Koha
 
+This tiny "side project" is meant to be more of a "toy" rather than a serious product. Personally speaking, I'm not in favor of *solely* using GenAI for finding out DDC class numbers, given the frequent bouts of "hallucinations" being so common with current AI models. Also, getting accurate results can be difficult for digital bibliographic records that are short on metadata. As my good friend and senior - Prof. Parthasarathi Mukhopadhyay mentioned recently on FB - we need to look beyond off-the-shelf LLM models; to satisfy the needs of the user community along with the need for accuracy and being mindful of the biases, exploring RAG (Retrieval-Augmented Generation) by taking help of validated corpora is one of the possible way forward. I concur.
+
+However, several readers of our blog, our clients and partners and friends in the Indian LIS community have been long asking me for something of this nature, especially since OCLC closed down the free OCLC Classify service in 2022. To be fair to OCLC, the project started as an experimental FRBR based classification service in 2008. It was never meant to be a long-term project. In fact OCLC gave a full 2 years of heads-up in announcing the project's planned shutdown in 2022.
+
+So after enough people had managed to bug me, especially after Anupta's (Jana) FB post on the topic, I decided to put in a few hours effort and here it is - warts and all. What this "toy" allows you to do is :
+
+(a) Experiment with over more than ****270**** LLM models (including variants) from over ****45**** AI providers and with more than ****70**** free models (daily usage quota may apply) with just a single click of the mouse.
+
+(b) Study and compare the difference in output between the various models.
+
+(c) Learning more about the stochastic nature of AI output and also how we should not blindly depend on AI
+
+Note about "free" models : Always remember "when the service is free, ***you*** are the product!". At this juncture we in India should be mindful of the The Digital Personal Data Protection Act (DPDP), 2023 (NO. 22 OF 2023)
+[(https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf)](https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf)
+
+Well, you people wanted this badly. So far, I do not agree with that view-point, but here it is! Signing out with the words of Sukumar Ray (The GOAT) - "তারপরে যাও যেথায় খুশি, জ্বালিও নাকো মোরে" :P
+
+---
+
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## Overview
