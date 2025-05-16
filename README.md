@@ -46,7 +46,7 @@ This script seamlessly integrates into Koha through the system preferences `Intr
       * **Negative Balance:** If your account has a negative credit balance, you may encounter `402` errors, even for free models. Adding credits to bring your balance above zero will restore access.
   * **Error Handling:** If there's an issue communicating with the OpenRouter API (e.g., invalid API key, insufficient credits, rate limiting, or service outage), an error message will be displayed.
 
-    ![Image #1 : OpenRouter API Error](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image1.png)
+    ![Image \#1 : OpenRouter API Error](https://github.com/l2c2technologies/koha-ai-ddc-assistant/blob/main/screenshots/image1.png)
     *OpenRouter API error message.*
 
 ## Telemetry
