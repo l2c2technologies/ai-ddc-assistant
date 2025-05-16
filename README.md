@@ -40,7 +40,7 @@ This assistant captures operational data about the AI suggestion process and sto
 * The logged-in Koha username.
 * The borrowernumber of the logged-in user (if available).
 
-This information helps in understanding the usage patterns and costs associated with the AI assistant.
+This information helps in understanding the usage patterns and costs associated with the AI assistant at individual bibliographic record level.
 
 ## Features
 
