@@ -1,0 +1,68 @@
+/*
+  ======================================================
+  Name        : AI based DDC23 suggestions assistant
+  Version     : 2025.05.1_GA
+  Date        : 2025-05-15
+  Author      : Indranil Das Gupta <indradg@l2c2.co.in>
+  License     : https://www.gnu.org/licenses/gpl-3.0.txt
+  ======================================================
+*/
+
+.tag_title {
+    display: flex;
+    align-items: center;
+}
+
+.tag_title > .field_controls:first-child {
+    margin-right: 10px;
+}
+
+.ddc-controls {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    background: moccasin;
+    padding: 3px;
+}
+
+.ddc-trigger-container {
+    display: flex;
+    align-items: center;
+}
+
+#modelSelect2 {
+    width: 630px !important; /* Set width on the select element */
+    margin-top: 0 !important;
+    margin-left: 10px;
+}
+
+.ddc-model-select2-container {
+    width: 630px !important; /* Style the generated container */
+}
+
+.ddc-model-select2-container--default .select2-selection--single {
+    height: auto;
+}
+
+.ddc-model-select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: inherit;
+}
+
+.ddc-model-select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 26px;
+}
+
+.ddc-model-select2-container--open .select2-dropdown {
+    position: absolute !important;
+    z-index: 1051;
+    border: 1px solid #aaa;
+    background-color: white;
+}
+
+.ddc-modal-footer {
+    margin-right: 0px !important;
+    margin-left: 0px !important; 
+    padding: 0px !important;
+}
+
+/* ======================================================  */
