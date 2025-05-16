@@ -6,7 +6,7 @@ This tiny "side project" is meant to be more of a "academic toy" rather than a s
 
 However, several readers of our blog, our clients and partners and friends in the Indian LIS community have been long asking me for something of this nature, especially since OCLC closed down the free OCLC Classify service in 2022. To be fair to OCLC, the project started as an experimental FRBR based classification service in 2008. It was never meant to be a long-term project. In fact OCLC gave a full 2 years of heads-up in announcing the project's planned shutdown in 2022.
 
-So after enough people had managed to bug me, especially after Anupta's (Jana) FB post on the topic, I decided to put in a few hours effort and here it is - warts and all. So,
+So after enough people had managed to bug me, especially after Anupta's (Jana) FB post on the topic, I decided to put in a few hours effort and here it is - warts and all.
 
 ### What does this "toy" allow you to do
 
@@ -35,7 +35,6 @@ This script seamlessly integrates into Koha through the system preferences `Intr
 ## Table of Contents
 
 * [About OpenRouter](#about-openrouter)
-* [Important Notes Regarding OpenRouter](#important-notes-regarding-openrouter)
 * [Telemetry](#telemetry)
 * [Features](#features)
 * [Prerequisites](#prerequisites)
@@ -43,15 +42,12 @@ This script seamlessly integrates into Koha through the system preferences `Intr
 * [Usage in Koha](#usage-in-koha)
 * [Configuration](#configuration)
 * [License](#license)
-* [Author](#author)
-* [Version](#version)
-* [Date](#date)
 
 ## About OpenRouter
 
 [OpenRouter](https://openrouter.ai/) is an aggregator that provides a single API to access various Large Language Models (LLMs) from different providers like OpenAI, Anthropic, Google, and others. This allows developers to easily experiment with and utilize different AI models through a unified interface.
 
-## Important Notes Regarding OpenRouter
+### Important Notes Regarding OpenRouter
 
   * **Minimum Credit:** Even though OpenRouter.ai offers some free Large Language Models (LLMs), their platform requires a minimum credit balance of USD 5 in your account to use their services. For users in India, this might necessitate using a credit card on either the Visa or MasterCard network to add credits to your OpenRouter account.
   * **Rate Limits:** OpenRouter implements rate limits to ensure fair usage:
