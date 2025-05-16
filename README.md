@@ -28,6 +28,7 @@ The CSS inclusion snippet is available at: [https://github.com/l2c2technologies/
     * **DDoS Protection:** Cloudflare's DDoS protection will block unusually high traffic.
     * **Paid Usage Limits:** For other requests, rate limits depend on your remaining credits: 1 request per credit per second, up to a surge limit (typically 500 requests per second).
     * **Negative Balance:** If your account has a negative credit balance, you may encounter `402` errors, even for free models. Adding credits to bring your balance above zero will restore access.
+* **Error Handling:** If there's an issue communicating with the OpenRouter API (e.g., invalid API key, insufficient credits, rate limiting, or service outage), an error message will be displayed. *(See Image 3)*
 
 ## Telemetry
 
@@ -40,17 +41,17 @@ This assistant captures operational data about the AI suggestion process and sto
 * The logged-in Koha username.
 * The borrowernumber of the logged-in user (if available).
 
-This information helps in understanding the usage patterns and costs associated with the AI assistant at individual bibliographic record level.
+This information helps in understanding the usage patterns and costs associated with the AI assistant at individual bibliographic record level. *(See Image 5)*
 
 ## Features
 
 * **AI-Powered Suggestions:** Uses various Large Language Models (LLMs) via OpenRouter to generate DDC23 suggestions.
-* **Model Selection:** Allows users to choose from a list of available LLMs, each with potentially different performance and cost.
+* **Model Selection:** Allows users to choose from a list of available LLMs, each with potentially different performance and cost. *(See Image 2)*
 * **Contextual Prompting:** Constructs a detailed prompt for the AI using the bibliographic information available in the MARC fields (245$, 020$a, 520$a, 650$a).
-* **Clear Presentation:** Displays the AI-generated DDC suggestions in a modal dialog, highlighting the most suitable suggestion (if identified by the AI).
+* **Clear Presentation:** Displays the AI-generated DDC suggestions in a modal dialog, highlighting the most suitable suggestion (if identified by the AI). *(See Image 1)*
 * **Integration with Koha:** Allows users to easily select a suggested DDC number, which will then populate the 082$a field in the bibliographic record within the Koha interface.
-* **AI Analysis View:** Provides an option to view the raw response from the AI model for better understanding of its reasoning.
-* **OpenRouter Credit Information:** Displays the user's OpenRouter API credit balance and usage.
+* **AI Analysis View:** Provides an option to view the raw response from the AI model for better understanding of its reasoning. *(See Image 4)*
+* **OpenRouter Credit Information:** Displays the user's OpenRouter API credit balance and usage. *(See Image 1)*
 * **Usage Tracking:** Records information about the AI model used and the token consumption in the 538$a field of the bibliographic record.
 
 ## Prerequisites
@@ -84,11 +85,12 @@ This script is designed to be included in Koha's system preferences:
 ## Usage in Koha
 
 1.  Navigate to the cataloging interface in your Koha intranet.
-2.  When adding or editing a bibliographic record, you will see a "Get Dewey Suggestions" checkbox near the title field.
+2.  You will see a "Get Dewey Suggestions" checkbox and a model selection dropdown near the title field. *(See Image 2)*
 3.  Optionally, select an LLM model from the dropdown menu.
 4.  Check the "Get Dewey Suggestions" checkbox.
-5.  A modal dialog will appear with AI-generated DDC number suggestions.
-6.  Select a suggestion and click "Select" to populate the 082$a field. The 538 field will also be updated with telemetry data.
+5.  A modal dialog will appear with AI-generated DDC number suggestions, along with credit information and usage details. *(See Image 1)*
+6.  Select a suggestion and click "Select" to populate the 082$a field. The 538 field will also be updated with telemetry data. *(See Image 5)*
+7.  To understand the AI's reasoning, click the "here" link in the modal to view the AI Analysis. *(See Image 4)*
 
 ## Configuration
 
